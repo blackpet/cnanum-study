@@ -1,0 +1,43 @@
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header .logo {
+	flex: 1 1 10vw;
+}
+
+.header .logo img {
+	width: 8vw;
+}
+
+.header .menu {
+	flex: 3 3;
+	display: flex;
+	align-items: center;
+}
+
+.header .menu li {
+	flex: 1;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+
+
+/****** DEBUG ****** /
+ul.menu {
+	border: 1px solid red;
+}
+ul.menu li {
+	border: 1px solid blue;
+}
+
+**/
