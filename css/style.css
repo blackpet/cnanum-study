@@ -8,6 +8,11 @@
     list-style: none;
 }
 
+.study-03 .menu li,
+.study-03 h1 {
+    text-transform: uppercase;
+}
+
 /* ########## header ########## */
 .study-03 .header {
     height: 100px;
