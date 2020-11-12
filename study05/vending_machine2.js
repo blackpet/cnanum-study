@@ -5,7 +5,7 @@ var drinks = [
 ];
 
 var myDrink = '콜라';
-var myMoney = 600;
+var myMoney = 200;
 var canBuyDrinks = [];
 var remainMoney = 0; // 구매 후 잔액
 var isBuy = false; // 구매 여부

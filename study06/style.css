@@ -1,0 +1,57 @@
+* {
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.input {
+    border: 1px solid orangered ;
+    display: flex;
+}
+
+.input div {
+    border: 1px solid rgb(24, 10, 182) ;
+    display: flex;
+    margin: 10px;
+}
+
+.input button {
+    margin: 10px
+}
+
+ul li {
+    text-align: center;
+    border: 1px solid orangered ;
+}
+
+ul li:hover {
+    background-color: rgb(38, 201, 38);
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    clear: both;
+}
+
+li {
+    list-style: none;
+}
+
+li.selectableColor {
+    background-color: rgb(9, 21, 241);
+}
+
+li.unselectableColor {
+    background-color: rgb(241, 9, 28);
+}
+
+ul li h3 {
+    margin: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
