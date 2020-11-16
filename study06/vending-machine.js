@@ -15,18 +15,22 @@ var canBuy = false; // 음료를 살 수 있는 금액이다!
  */
 var drink_lis; // 음료 item LI array
 var drink_btns; // 음료 선택 버튼 array
+var drink_btns2; // 음료 삭제 버튼
 var drink_qtys; // 수량 array
 function init() {
     // array data를 화면에 동적으로 출력하자!
     renderDrinks();
 
     drink_lis = document.querySelectorAll('ul#drink-items li');
-    drink_btns = document.querySelectorAll('li button');
+    drink_btns = document.querySelectorAll('li .buy');
+    drink_btns2 = document.querySelectorAll('li .remove');
     drink_qtys = document.querySelectorAll('.qty');
     // 시작 시에는 버튼 비활성화!!
     for(var i = 0; i < drink_btns.length; i++) {
         var btn = drink_btns[i];
+        var btn2 = drink_btns2[i];
         btn.disabled = true;
+        btn2.disabled = true;
     }
 }
 
@@ -36,8 +40,8 @@ function renderDrinks() {
     // array data 만큼 돌려라~
     for(var i = 0; i < drinks.length; i++) {
         var d = drinks[i];
-        drink_li_html = drink_li_html + `
-        <li>
+        drink_li_html = drink_li_html + 
+        `<li>
           <div class="item">
             <!-- 음료마다  -->
             <h3>${d.name}</h3>
@@ -84,14 +88,14 @@ function canBuyDrinkEnable() {
         else if(myMoney >= drinks[i].price) {
             // 살 수 있는 음료가 있다!
             canBuy = true;
-
             drink_btns[i].disabled = false;
+            drink_btns2[i].disabled = true;
             // 선택 가능한 음료를 highlight!
             drink_lis[i].classList.add('selectable');
         } else {
             drink_btns[i].disabled = true;
             // 선택 가능한 음료를 highlight!
-            drink_lis[i].classList.remove('selectable');
+           // drink_lis[i].classList.remove('selectable');
         }
     }
 }
