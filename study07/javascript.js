@@ -14,8 +14,8 @@ cList = document.querySelector('.com_list');
 
 // 프로그램을 새로 시작
 function init() {
-    tList.innerHTML = '';
-    cList.innerHTML = '';
+    // tList.innerHTML = '';
+    // cList.innerHTML = '';
     renderList(false, tList);
     renderList(true, cList);
 }
@@ -62,14 +62,14 @@ function renderList(bl,el) {
                 btn = `
                 <button onclick="complete(${i})">완료함</button>`
             };
-            html = `
+            html = html + `
             <li>
                 <div class="todoList">${t.todo}</div>
                 ${btn}
             </li>`;
-            el.innerHTML += html;
         };
     };
+    el.innerHTML = html;
 };
 
 

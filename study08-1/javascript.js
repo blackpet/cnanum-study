@@ -13,18 +13,22 @@ function rendercards(photos) {
     for(var i = 0; i < photos.results.length; i++) {
         var photo = photos.results[i];
         html = html + `
-        <div class="cardImg">
-            <img class="card-img-top" src="${photo.urls.regular}" alt="${photo.urls.name}">
-            <div class="card-body">
-                <h4 class="card-title">${photo.alt_description}Wildlife Photography</h4>
-                <p class="card-text">${photo.created_at}</p>
-                <a href="javascript:void(0);" class="btn btn-primary btn-lg btn-block"><i class="fa fa-heart"></i> Love this pic</a>
+        <div class="row m-t-40">
+            <div class="card">
+                <div class="cardImg">
+                    <img class="card-img-top" src="${photo.urls.regular}" alt="${photo.urls.name}">
+                    <div class="card-body">
+                        <h4 class="card-title">${photo.alt_description}Wildlife Photography</h4>
+                        <p class="card-text">${photo.created_at}</p>
+                        <a href="javascript:void(0);" class="btn btn-primary btn-lg btn-block"><i class="fa fa-heart"></i> Love this pic</a>
+                    </div>
+                </div>
             </div>
         </div>
         `;
         console.log(photos)
     }
-    document.querySelector('.card').innerHTML = html;
+    document.querySelector('.container').innerHTML = html;
     // 변수명의 의미
         // rendercards = 카드들을 동적으로 출력
         // html = innerHMTL의 값을 지정할 변수
