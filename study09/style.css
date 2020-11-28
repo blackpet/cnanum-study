@@ -1,0 +1,24 @@
+.hide {
+	display: none;
+}
+
+.card-panel {
+	height: 75px;
+}
+
+.timer {
+	font-size: 10rem;
+	text-align: center;
+}
+
+.control {
+	text-align: center;
+}
+
+.question {
+	font-size: 4rem;
+}
+
+.panel {
+	font-size: 2rem;
+}

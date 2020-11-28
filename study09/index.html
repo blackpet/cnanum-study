@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Flip Card Game</title>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	
+	<link rel="stylesheet" href="style.css" />
+	<script defer src="flip-card-game.js"></script>
+	
+</head>
+<body>
+	<h1>Let's Play Flip Card Game</h1>
+	
+	<div class="row">
+		<div class="col s12">
+			
+			<div class="panel">
+				<ul>
+					<li>실패횟수: <span class="failed-count">0</span></li>
+					<li>Timer: <span class="play-timer"></span></li>
+				</ul>
+			</div>
+			
+			<div class="control btns">
+				<a id="startBtn" onclick="start()" class="waves-effect waves-light btn black">
+					<i class="material-icons right">android</i>play
+				</a>
+			</div>
+			
+			<div class="control question hide">이 색깔의 카드는 무엇인가요? <span class="what-color"></span></div>
+		</div>
+	</div>
+	
+	<div class="timer hide">3</div>
+
+  <div class="row cards">
+		
+		<!-- sample card markup 
+    <div class="col s12 m5">
+      <div class="card-panel teal">
+        <span class="white-text color-txt">teal
+        </span>
+      </div>
+    </div>
+		-->
+		
+  </div> <!-- // row -->
+	
+</body>
+</html>
