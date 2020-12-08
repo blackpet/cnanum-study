@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Flip Game</title>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="design.css" />
+  </head>
+  <body>
+    <button class="startBtn" onclick="startBtn()">start</button>
+    <button class="blockBtn" onclick="blockBtn()">remove</button>
+    <button class="quizBtn" onclick="quizBtn2()">quiz</button>
+    <button class="result" onclick="resultBtn()">정답</button>
+    <div class="question"> 이 색깔의 카드는 어딧을까요?
+      <span class="whatColor"></span>
+    </div>
+    <div class="row">
+      <!-- javascript로 출력 -->
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="game.js"></script>
+  </body>
+</html>
