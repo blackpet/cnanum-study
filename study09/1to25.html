@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>1 to 25</title>
+	
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-firestore.js"></script>
+	<script src="../firebase/config.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+  	   https://firebase.google.com/docs/web/setup#available-libraries -->
+	
+	<script defer src="./1to25.js"></script>
+	
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		.main {
+			text-align: center;
+		}
+		#startBtn {
+			font-size: 3em;
+		}
+		#timer {
+			font-size: 3em;
+		}
+		
+		#panel {
+			display: grid;
+			width: 600px;
+			height: 600px;
+			margin: auto;
+			grid-template-rows: repeat(5, 1fr);
+			grid-template-columns: repeat(5, 1fr);
+			grid-gap: 5px;
+		}
+		#panel .num {
+			border: 1px solid red;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 3em;
+			position: relative;
+		}
+		.num .block {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255, 80, 80, 0.9);
+		}
+		
+		.records {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		
+	
+	</style>
+</head>
+<body>
+	<div class="main">
+		<h1>1 to 25 game</h1>
+		<div class="control">
+			<button id="startBtn" onclick="start();">START</button>
+			<button onclick="testEndGame();">[TEST] END GAME</button>
+			<div id="timer">Timer</div>
+		</div>
+		<div id="panel"></div>
+		
+		<div class="records">
+			<div>
+				<h4>Ranking Top 10</h4>
+				<ul class="ranking">
+				</ul>
+			</div>
+			<div>
+				<h4>Recent Top 10</h4>
+				<ul class="recent">
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
