@@ -1,0 +1,17 @@
+.numbers {
+    display: grid;
+    grid-template-columns: 200px 200px 500px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 500px;
+    height: 500px;
+}
+
+.numbers .number {
+    display: flex;
+    border: 1px solid red ;
+    font-size: 100px;
+}
+
+button {
+    disabled : false;
+}
