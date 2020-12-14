@@ -24,6 +24,15 @@ var timeIntv = 10;
 // 숫자의 위치를 출력할 위치
 var numList = document.querySelector('.numbers');
 
+function foo(a) {
+    console.log(a);
+}
+
+function foo2(no, idx) {
+    console.log(no, idx);
+}
+
+
 //초기화
 function init() {
     renderNum(nums)
@@ -46,7 +55,14 @@ function gameStart() {
     newNums = suffleNum(nums);
     renderNum(newNums);
     intv = setInterval(timeCount,timeIntv);
+    disabledStart()
 };
+
+// 스타트버튼 비활성화
+function disabledStart() {
+    var start = document.querySelector('.startBtn');
+    start.disabled = 'true';
+}
 
 //game count start!
 function timeCount() {
@@ -90,13 +106,13 @@ function disabledNum(selectIdx) {
 
 // 다음숫자로 넘어가자
 function nextNum() {
-idx++;
+    idx++;
     if(newNums.length == idx) {
         clearInterval(intv)
         alert('다 풀었습니다. 걸린시간 :' + (time / 1000)+'초 / 틀린 횟수 : ' + misscount + '회')
     }
     return;
-};console.log(newNums[idx]);
+};
 
 
-init()
+// init()

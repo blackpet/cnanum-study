@@ -1,3 +1,8 @@
+.game {
+    align-items: center;
+    justify-content: center;
+}
+
 .numbers {
     display: grid;
     grid-template-columns: 200px 200px 500px;
@@ -10,8 +15,7 @@
     display: flex;
     border: 1px solid red ;
     font-size: 100px;
-}
-
-button {
-    disabled : false;
+    align-items: center;
+    justify-content: center;
+    width: auto;
 }
