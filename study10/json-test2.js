@@ -569,37 +569,21 @@ var obj = [
     }
 ];
 
-var objList = document.querySelector('.obj ul')
 
-function render() {
-    var html ='1';
-    for(var i = 0; i < obj.length; i++) {
-        var c = obj[i];
-        var friendList= '';
-        // 친구리스트를 ul > li에 담자
-        for(var j = 0; j < c.friends.length; j++) {
-            var f = c.friends[j].name;
-            friendList = friendList + `
-            <li>
-                ${j+1}번째 친구 : ${f}
-            </li>`
-        }
-        // 친구 리스트를 각각 1줄씩 출력하자
-
-        html = html + `
-            <li>
-                ${c.name.first} ${c.name.last}
-                <ul>
-                    ${friendList}
-                </ul>
-            </li>
-        `;
-    }
-    objList.innerHTML = html;
-}
 
 console.log(obj);
 
-render();
-
+// var html = obj.reduce(function(h, item) {
+//   h += `<li>${item.name.first} (${item.age})</li>`;
+//   return h;
+// } , '');
+var html = obj.reduce((h, item) => 
+  h += `
+  <li>
+    ${item.name.first} (${item.age})
+    <div>
+      ${item.friends.map((f) => f.name).join(', ')}
+    </div>
+  </li>`, '');
+document.querySelector('.obj ol').innerHTML = html;
 
