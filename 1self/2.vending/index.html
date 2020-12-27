@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>자판기만들기</title>
+</head>
+<body>
+    <h1>음료 자판기</h1>
+    <div class="input">
+        <div>투입금액</div>
+        <div><input type="text" id="Money" /></div>
+        <button onclick="insertMoney()">투입</button>
+        <div id="myMoney">잔여금액</div><button onclick="returnMoney()">반환</button>
+    </div>
+
+    <div id="message">
+        음료를 드시려면 금액을 투입해주세요
+    </div>
+    <div>
+        <ul class="drinks">
+            <!-- <li>
+                <div>
+                    <h3>바닐라라떼</h3>
+                    <div class="price">1000</div>
+                    <div class="qty">수량 : 10</div>
+                    <button onclick="buydrink(0)">선택</button>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h3>아메리카노</h3>
+                    <div class="price">800</div>
+                    <div class="qty">수량 : 2</div>
+                    <button onclick="buydrink(1)">선택</button>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h3>카 페 라 떼</h3>
+                    <div class="price">800</div>
+                    <div class="qty">수량 : 4</div>
+                    <button onclick="buydrink(2)">선택</button>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h3>카 페 모 카</h3>
+                    <div class="price">900</div>
+                    <div class="qty">수량 : 0</div>
+                    <button onclick="buydrink(3)">선택</button>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h3>에스프레소</h3>
+                    <div class="price">300</div>
+                    <div class="qty">수량 : 1</div>
+                    <button onclick="buydrink(4)">선택</button>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h3>딸기스무디</h3>
+                    <div class="price">1200</div>
+                    <div class="qty">수량 : 3</div>
+                    <button onclick="buydrink(5)">선택</button>
+                </div>
+            </li> -->
+        </ul>
+    </div>
+    <script src="drink_machine.js"></script>
+</body>
+</html>
