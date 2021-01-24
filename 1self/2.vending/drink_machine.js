@@ -28,7 +28,7 @@ function renderdrink() {
                 <h3>${d.name}</h3>
                 <div class="price">${d.price}</div>
                 <div class="qty">수량 : ${d.qty}</div>
-                <button onclick="buydrink(0)">선택</button>
+                <button onclick="buydrink(${d})">선택</button>
             </div>
         </li>
         `
