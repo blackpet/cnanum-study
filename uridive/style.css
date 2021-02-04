@@ -1,0 +1,85 @@
+h1 {
+    font-size: 100px;
+    text-align: center;
+}
+h1 img {
+    position: relative;
+    top: 25px;
+
+}
+ul {
+    list-style: none;
+}
+.menubar {
+    position: relative;
+    display: flex;
+}
+.dropDown {
+    height: 40px;
+    width:300px;
+    padding: 5px 1px;
+    margin: 0;
+    background: dodgerblue;
+}
+.dropDownContent {
+    display: none;
+    position: absolute;
+    background-color: #FFDAB9
+}
+
+.dropDown .dropDownContent a {
+    display: block;
+    padding: 7px 8px;
+    margin: 0;
+    color: darkblue;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    font-family: "굴림";
+    font-weight: bold;
+    font-size:18px;
+}
+.dropDown:hover > ul {
+    background: #f0f0f0;
+    color: black;
+    margin: 0;
+    padding: 5px;
+}
+.dropDownContent a:hover {
+    background-color: #CD853F;
+}
+.menubar:hover .dropDownContent {
+    display: block;
+}
+.menubar:hover .dropDown {
+    background-color: #CD853F;
+}
+.mainImgsSlide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.mainImgSlide {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mainImgSlide img {
+    width: inherit; height: auto;
+    max-width: 100%;
+}
+
+.clickBoxs {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.clickBoxs .clickBox {
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.clickBox img {
+    width: inherit; height: auto;
+    max-width: 100%;
+}
