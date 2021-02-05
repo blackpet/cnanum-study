@@ -1,11 +1,11 @@
 h1 {
     font-size: 100px;
     text-align: center;
+    font-family: serif ;
 }
 h1 img {
     position: relative;
     top: 25px;
-
 }
 ul {
     list-style: none;
@@ -24,10 +24,11 @@ ul {
 .dropDownContent {
     display: none;
     position: absolute;
-    background-color: #FFDAB9
+    background-color: dodgerblue;
 }
 
 .dropDown .dropDownContent a {
+    background-color: skyblue;
     display: block;
     padding: 7px 8px;
     margin: 0;
@@ -36,22 +37,28 @@ ul {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
     font-family: "굴림";
     font-weight: bold;
-    font-size:18px;
+    font-size:11px;
 }
-.dropDown:hover > ul {
+.dropDown:hover {
     background: #f0f0f0;
     color: black;
     margin: 0;
     padding: 5px;
 }
 .dropDownContent a:hover {
-    background-color: #CD853F;
+    background-color: deepskyblue;
 }
-.menubar:hover .dropDownContent {
+#dropUri:hover .dropDownContent {
     display: block;
 }
-.menubar:hover .dropDown {
-    background-color: #CD853F;
+#dropPro:hover .dropDownContent {
+    display: block;
+}
+#dropGal:hover .dropDownContent {
+    display: block;
+}
+#dropSch:hover .dropDownContent {
+    display: block;
 }
 .mainImgsSlide {
     width: 100%;
