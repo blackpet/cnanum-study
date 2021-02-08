@@ -1,3 +1,7 @@
+mainHome {
+    width: inherit; height: auto;
+    max-width: 100%;
+}
 h1 {
     font-size: 100px;
     text-align: center;
@@ -9,22 +13,46 @@ h1 img {
 }
 ul {
     list-style: none;
+    padding: 0;
 }
 .menubar {
     position: relative;
     display: flex;
 }
+.mainMenu {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
 .dropDown {
-    height: 40px;
+    position: relative;
+    height: 50px;
     width:300px;
-    padding: 5px 1px;
     margin: 0;
     background: dodgerblue;
+    font-size: 1.5em;
+}
+.dropDown:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.dropDown:last-child {
+    background: #262626;
+    color: white;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 .dropDownContent {
     display: none;
     position: absolute;
     background-color: dodgerblue;
+    box-shadow: 1px 1px 13px white;
+    border-radius: 4px;
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10em;
+    z-index: 2;
 }
 
 .dropDown .dropDownContent a {
@@ -37,27 +65,19 @@ ul {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
     font-family: "굴림";
     font-weight: bold;
-    font-size:11px;
 }
 .dropDown:hover {
-    background: #f0f0f0;
-    color: black;
+    background: mediumblue;
+    color: white;
     margin: 0;
-    padding: 5px;
+}
+.dropDown:last-child:hover {
+    background: red;
 }
 .dropDownContent a:hover {
     background-color: deepskyblue;
 }
-#dropUri:hover .dropDownContent {
-    display: block;
-}
-#dropPro:hover .dropDownContent {
-    display: block;
-}
-#dropGal:hover .dropDownContent {
-    display: block;
-}
-#dropSch:hover .dropDownContent {
+.dropDown:hover .dropDownContent {
     display: block;
 }
 .mainImgsSlide {
